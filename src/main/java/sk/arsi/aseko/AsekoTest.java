@@ -231,6 +231,10 @@ public class AsekoTest {
             connection.setRequestProperty("Content-Type", "application/json; charset=utf-8");
             connection.setRequestProperty("Accept", "application/json");
             connection.setRequestProperty("authorization", "Bearer " + login.token);
+            connection.setRequestProperty("User-Agent", "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36");
+            connection.setRequestProperty("x-app-name", "pool-live");
+            connection.setRequestProperty("x-app-version", "0.0.1");
+            connection.setRequestProperty("x-mode", "production");
             ObjectMapper om = new ObjectMapper();
             StringWriter stringWriter = new StringWriter();
             om.writeValue(stringWriter, query);
